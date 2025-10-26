@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <title>Recubeim</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+<style>
+
+ body {
+  font-family: arial;
+  background: linear-gradient(-45deg, #141414, #000000, #0a1a2a, #141414);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+ #zg {
+ margin-left: auto;
+ margin-right: auto;
+ color: White;
+ height: 20px;
+ width: 700px;
+ padding: 10px;
+ background: linear-gradient(to bottom right, #2f4f6f, #000000);
+ background-color: #2f4f6f;
+ border: 1px solid black;
+ }
+ 
+
+ #pr {
+ font-weight: bold;
+ color: white;
+ font-family: arial;
+ }
+ 
+
+ #sb {
+ color: #cccccc;
+ font-size: 14px;
+ }
+ 
+
+ #mr {
+ padding: 5px;
+ margin-left: auto;
+ margin-right: auto;
+ color: White;
+ height: auto;
+ width: 710px;
+ background-color: #292929;
+ }
+ 
+ #tabs {
+ margin-top: 5px;
+ display: flex;
+ gap: 2px;
+ }
+
+#tabs a {
+ padding: 4px 16px;
+ background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+ border: 1px solid #000000;
+ border-radius: 0px;
+ font-size: 12px;
+ font-family: arial;
+ color: #d0d0d0;
+ text-decoration: none;
+}
+
+#tabs a:hover {
+ background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
+ color: white;
+ border-color: #2f4f6f;
+}
+
+#tabs a.active {
+ background: linear-gradient(to bottom, #2f4f6f, #1a2f4f);
+ color: white;
+ border-color: #4a6f9f;
+}
+ 
+ #svo {
+ padding: 5px;
+ margin-left: auto;
+ margin-right: auto;
+ color: #f0f0f0;
+ height: 590px;
+ width: 710px;
+ background-color: #222222;
+ position: relative;
+ }
+ 
+ #wk {
+ color: #f5f5f5;
+ height: 587px;
+ width: 100%;
+ padding: 15px;
+ background: linear-gradient(to bottom, #1f1f1f, #131313);
+ background-color: #191919;
+ display: block;
+ box-sizing: border-box;
+ overflow-y: auto;
+ }
+ 
+ #cl {
+ color: #f5f5f5;
+ height: 587px;
+ width: 100%;
+ padding: 15px;
+ background: linear-gradient(to bottom, #1f1f1f, #141414);
+ background-color: #191919;
+ display: none;
+ box-sizing: border-box;
+ overflow-y: auto;
+ }
+
+ #gal {
+ color: #f5f5f5;
+ height: 587px;
+ width: 100%;
+ padding: 15px;
+ background: linear-gradient(to bottom, #1f1f1f, #141414);
+ background-color: #191919;
+ display: none;
+ box-sizing: border-box;
+ overflow-y: auto;
+ }
+ 
+
+ #wk::-webkit-scrollbar, #cl::-webkit-scrollbar, #gal::-webkit-scrollbar {
+ width: 12px;
+ }
+ 
+ #wk::-webkit-scrollbar-track, #cl::-webkit-scrollbar-track, #gal::-webkit-scrollbar-track {
+ background: #1a1a1a;
+ border-left: 1px solid #000;
+ }
+ 
+ #wk::-webkit-scrollbar-thumb, #cl::-webkit-scrollbar-thumb, #gal::-webkit-scrollbar-thumb {
+ background: linear-gradient(to bottom, #2f4f6f, #1a2f4f);
+ border: 1px solid #000;
+ border-radius: 6px;
+ }
+ 
+ #wk::-webkit-scrollbar-thumb:hover, #cl::-webkit-scrollbar-thumb:hover, #gal::-webkit-scrollbar-thumb:hover {
+ background: linear-gradient(to bottom, #3a5f8f, #2a4f7f);
+ }
+ 
+ #wk::-webkit-scrollbar-button, #cl::-webkit-scrollbar-button, #gal::-webkit-scrollbar-button {
+ display: none;
+ }
+ 
+
+ #wk, #cl, #gal {
+ scrollbar-width: thin;
+ scrollbar-color: #2f4f6f #1a1a1a;
+ }
+ 
+ .styled-button {
+ color: White;
+ height: 20px;
+ width: auto;
+ padding: 1px 12px;
+ background: linear-gradient(to bottom right, #2f4f6f, #141414);
+ background-color: #2f4f6f;
+ border: 1px solid #000000;
+ margin: 5px 0;
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 12px;
+ font-family: arial;
+ transition: all 0.3s ease;
+ cursor: pointer;
+ line-height: 1;
+ }
+
+.styled-button:hover {
+ background: linear-gradient(to bottom right, #3a5f8f, #242424);
+ transform: translateY(-1px);
+ box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.styled-button:active {
+ transform: translateY(0);
+}
+
+ #kn {
+ color: White;
+ height: 20px;
+ width: 98px;
+ padding: 1px;
+ background: linear-gradient(to bottom right, #2f4f6f, #141414);
+ background-color: #2f4f6f;
+ border: 1px solid #000000;
+ margin: 5px 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+ 
+ #pk {
+ color: #b0b0b0;
+ font-size: 10px
+ }
+ 
+ #cm {
+ font-weight: bold;
+ color: white;
+ font-family: arial;
+ }
+ 
+ #end {
+ padding: 5px;
+ margin-left: auto;
+ margin-right: auto;
+ color: #b0b0b0;
+ height: 13px;
+ width: 710px;
+ background-color: #292929;
+ font-size: 13px;
+ }
+ 
+ .Rc { 
+ font-size: 16px;
+ color: white;
+ border-left: 4px solid black;
+ padding: 2px;
+ background: #323232;
+ }
+ 
+ hr {
+ border-color: #414141;
+ margin: 15px 0;
+ }
+ 
+ a {
+ text-decoration: none;
+ color: #e0e0ff;
+ }
+ 
+ a:hover {
+ color: white;
+ }
+ 
+.creations-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 15px;
+ margin: 20px 0;
+}
+
+.creation-card {
+ background: #2a2a2a;
+ border: 1px solid #3a3a3a;
+ border-radius: 4px;
+ padding: 10px;
+ transition: transform 0.2s;
+}
+
+.creation-card:hover {
+ transform: translateY(-2px);
+ border-color: #2f4f6f;
+}
+
+.creation-image {
+ width: 100%;
+ height: 120px;
+ background: #1a1a1a;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 24px;
+ margin-bottom: 8px;
+ border: 1px solid #000;
+}
+
+.creation-info {
+ font-size: 12px;
+}
+
+.creation-info strong {
+ color: white;
+}
+
+.creation-info small {
+ color: #888;
+}
+
+.screenshots-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 10px;
+ margin: 20px 0;
+}
+
+.screenshot-item {
+ background: #1a1a1a;
+ border: 1px solid #000;
+ padding: 8px;
+ cursor: pointer;
+ transition: all 0.2s;
+}
+
+.screenshot-item:hover {
+ border-color: #2f4f6f;
+ background: #2a2a2a;
+}
+
+.screenshot-real {
+ width: 100%;
+ height: 150px;
+ background: #1a1a1a;
+ border: 1px solid #000;
+ position: relative;
+ overflow: hidden;
+}
+
+.screenshot-real img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.3s;
+}
+
+.screenshot-real:hover img {
+ transform: scale(1.05);
+}
+
+.screenshot-caption {
+ text-align: center;
+ color: #ccc;
+ font-size: 11px;
+ margin-top: 5px;
+}
+
+.music-simple {
+ background: #2a2a2a;
+ border: 1px solid #3a3a3a;
+ padding: 15px;
+ margin: 20px 0;
+ border-radius: 4px;
+}
+
+.track-simple {
+ margin: 15px 0;
+ padding: 10px;
+ background: #1f1f1f;
+ border: 1px solid #000;
+}
+
+.track-simple h4 {
+ margin: 0 0 8px 0;
+ color: white;
+ font-size: 14px;
+}
+
+.audio-player {
+ width: 100%;
+ margin: 8px 0;
+ height: 30px;
+}
+
+.track-controls {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 8px;
+}
+
+.track-duration {
+ color: #888;
+ font-size: 11px;
+}
+
+.music-credits {
+ text-align: center;
+ color: #666;
+ font-size: 11px;
+ margin-top: 15px;
+ font-style: italic;
+}
+
+.lightbox {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0,0,0,0.9);
+ z-index: 1000;
+ align-items: center;
+ justify-content: center;
+}
+
+.lightbox-content {
+ max-width: 90%;
+ max-height: 90%;
+ border: 2px solid #2f4f6f;
+}
+
+.lightbox-close {
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ color: white;
+ font-size: 30px;
+ cursor: pointer;
+ background: rgba(0,0,0,0.5);
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 50%;
+}
+
+.censored {
+ background: repeating-linear-gradient(
+    45deg,
+    #2a2a2a,
+    #2a2a2a 2px,
+    #1a1a1a 2px,
+    #1a1a1a 4px
+ );
+ color: transparent;
+ text-shadow: 0 0 8px rgba(255,255,255,0.1);
+ border: 1px solid #333;
+ padding: 2px 6px;
+ border-radius: 3px;
+ user-select: none;
+ cursor: not-allowed;
+ display: inline-block;
+}
+
+.feedback-form {
+ background: #2a2a2a;
+ border: 1px solid #3a3a3a;
+ padding: 15px;
+ margin: 15px 0;
+ border-radius: 4px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+ width: 100%;
+ padding: 8px;
+ margin: 5px 0;
+ background: #1a1a1a;
+ border: 1px solid #2f4f6f;
+ color: white;
+ font-size: 12px;
+ font-family: arial;
+ box-sizing: border-box;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+ outline: none;
+ border-color: #4a6f9f;
+ background: #1f1f1f;
+}
+
+.feedback-form textarea {
+ resize: vertical;
+ min-height: 80px;
+}
+
+.captcha-container {
+ margin: 15px 0;
+ padding: 15px;
+ background: #1a1a1a;
+ border: 1px solid #2f4f6f;
+ border-radius: 4px;
+}
+
+.captcha-display {
+ background: #2a2a2a;
+ border: 1px solid #000;
+ padding: 15px;
+ margin: 10px 0;
+ text-align: center;
+ font-family: 'Courier New', monospace;
+ font-size: 24px;
+ font-weight: bold;
+ letter-spacing: 3px;
+ color: #fff;
+ text-shadow: 0 0 5px #2f4f6f;
+ user-select: none;
+ position: relative;
+ overflow: hidden;
+}
+
+.captcha-display::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%);
+ background-size: 10px 10px;
+ pointer-events: none;
+}
+
+.captcha-controls {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 10px;
+}
+
+.captcha-input {
+ width: 100%;
+ padding: 8px;
+ background: #1a1a1a;
+ border: 1px solid #2f4f6f;
+ color: white;
+ font-size: 16px;
+ text-align: center;
+ letter-spacing: 2px;
+ font-family: 'Courier New', monospace;
+}
+
+.captcha-input:focus {
+ outline: none;
+ border-color: #4a6f9f;
+ background: #1f1f1f;
+}
+
+.captcha-refresh {
+ background: #2f4f6f;
+ border: 1px solid #000;
+ color: white;
+ padding: 5px 10px;
+ cursor: pointer;
+ font-size: 12px;
+ border-radius: 3px;
+ transition: all 0.3s ease;
+}
+
+.captcha-refresh:hover {
+ background: #3a5f8f;
+ transform: scale(1.05);
+}
+
+.captcha-status {
+ font-size: 11px;
+ text-align: center;
+ margin-top: 8px;
+ min-height: 14px;
+}
+
+.security-indicator {
+ font-size: 10px;
+ color: #666;
+ text-align: center;
+ margin-top: 10px;
+}
+
+.security-indicator.secure {
+ color: #90ee90;
+}
+
+.security-indicator.warning {
+ color: #ffa500;
+}
+
+.security-indicator.danger {
+ color: #ff6b6b;
+}
+</style>
+
+<script>
+
+let currentTab = 'main';
+let lastSubmissionTime = 0;
+const MIN_INTERVAL = 30000; 
+let currentCaptchaCode = '';
+let formStartTime = Date.now();
+let mouseMovements = 0;
+let submissionHistory = [];
+let csrfToken = '';
+
+
+
+
+function generateCSRFToken() {
+    return 'csrf_' + Math.random().toString(36).substring(2) + '_' + Date.now().toString(36);
+}
+
+
+function sanitizeInput(text) {
+    if (typeof text !== 'string') return '';
+    
+
+    const div = document.createElement('div');
+    div.textContent = text;
+    let safeText = div.innerHTML;
+    
+
+    safeText = safeText
+        .replace(/[<>]/g, '')
+        .replace(/javascript:/gi, '') 
+        .replace(/on\w+=/gi, '')
+        .substring(0, 2000); 
+    
+    return safeText;
+}
+
+
+function checkFloodProtection() {
+    const now = Date.now();
+    const windowStart = now - 300000;
+    
+   
+    submissionHistory = submissionHistory.filter(time => time > windowStart);
+    
+
+    if (submissionHistory.length >= 5) { 
+        const timeToWait = Math.ceil((submissionHistory[0] + 300000 - now) / 1000 / 60);
+        return {
+            blocked: true,
+            message: `Too many submissions! Wait ${timeToWait} minutes`
+        };
+    }
+    
+    if (submissionHistory.length >= 3) {
+        return {
+            blocked: false,
+            warning: true,
+            message: 'Slow down! Too many messages'
+        };
+    }
+    
+    return { blocked: false };
+}
+
+
+function checkUserBehavior() {
+    const fillTime = Date.now() - formStartTime;
+    const isHuman = fillTime > 2000 && mouseMovements > 2;
+    
+    if (!isHuman) {
+        console.warn('Suspicious behavior detected');
+        return false;
+    }
+    return true;
+}
+
+function checkHoneypot() {
+    const honeypot = document.getElementById('feedbackWebsite').value;
+    const honeypot2 = document.getElementById('feedbackPhone').value;
+    return !honeypot && !honeypot2;
+}
+
+function performSecurityCheck() {
+    const statusElement = document.getElementById('securityStatus');
+    
+    const submittedToken = document.getElementById('csrfToken').value;
+    if (submittedToken !== csrfToken) {
+        statusElement.textContent = 'Security error: Invalid token';
+        statusElement.className = 'security-indicator danger';
+        return false;
+    }
+    
+    const floodCheck = checkFloodProtection();
+    if (floodCheck.blocked) {
+        statusElement.textContent = floodCheck.message;
+        statusElement.className = 'security-indicator danger';
+        return false;
+    }
+    
+    if (floodCheck.warning) {
+        statusElement.textContent = floodCheck.message;
+        statusElement.className = 'security-indicator warning';
+    }
+    
+    if (!checkHoneypot()) {
+        statusElement.textContent = 'Security filter activated';
+        statusElement.className = 'security-indicator danger';
+        return false;
+    }
+    
+    if (!checkUserBehavior()) {
+        statusElement.textContent = 'Suspicious activity detected';
+        statusElement.className = 'security-indicator warning';
+
+    }
+    
+    statusElement.textContent = 'Security check passed';
+    statusElement.className = 'security-indicator secure';
+    return true;
+}
+
+
+function generateCaptcha() {
+    let code = '';
+    for (let i = 0; i < 6; i++) {
+        code += Math.floor(Math.random() * 10);
+    }
+    currentCaptchaCode = code;
+    
+    const display = document.getElementById('captchaDisplay');
+    let html = '';
+    for (let i = 0; i < code.length; i++) {
+        const rotation = (Math.random() * 10) - 5;
+        const colorVariation = Math.floor(Math.random() * 40) - 20;
+        html += `<span style="display:inline-block; transform:rotate(${rotation}deg); color:rgb(${255 + colorVariation}, ${255 + colorVariation}, ${255 + colorVariation})">${code[i]}</span>`;
+    }
+    display.innerHTML = html;
+}
+
+function validateCaptcha() {
+    const userInput = document.getElementById('captchaInput').value;
+    return userInput === currentCaptchaCode;
+}
+
+
+function updateGreeting() {
+    const hour = new Date().getHours();
+    let greeting = "Welcome to Recubeim!";
+    
+    if (hour < 6) {
+        greeting = "Good night! Welcome to Recubeim!";
+    } else if (hour < 12) {
+        greeting = "Good morning! Welcome to Recubeim!";
+    } else if (hour < 18) {
+        greeting = "Good afternoon! Welcome to Recubeim!";
+    } else {
+        greeting = "Good evening! Welcome to Recubeim!";
+    }
+    
+    const greetingElement = document.querySelector('#wk h2');
+    if (greetingElement) {
+        greetingElement.textContent = greeting;
+    }
+}
+
+async function sendFeedback() {
+    const name = document.getElementById('feedbackName').value || 'Anonymous';
+    const message = document.getElementById('feedbackMessage').value;
+    const statusElement = document.getElementById('feedbackStatus');
+    const button = document.querySelector('.feedback-form .styled-button');
+    
+    if (!performSecurityCheck()) {
+        return;
+    }
+    
+    const now = Date.now();
+    if (now - lastSubmissionTime < MIN_INTERVAL) {
+        const secondsLeft = Math.ceil((MIN_INTERVAL - (now - lastSubmissionTime)) / 1000);
+        statusElement.innerHTML = `Please wait ${secondsLeft} seconds before sending another message`;
+        statusElement.style.color = '#ff6b6b';
+        return;
+    }
+    
+    if (!message.trim()) {
+        statusElement.innerHTML = 'Please write a message!';
+        statusElement.style.color = '#ff6b6b';
+        return;
+    }
+    
+    if (message.length > 2000) {
+        statusElement.innerHTML = 'Message too long (max 2000 characters)';
+        statusElement.style.color = '#ff6b6b';
+        return;
+    }
+    
+    if (!validateCaptcha()) {
+        statusElement.innerHTML = 'Wrong CAPTCHA code!';
+        statusElement.style.color = '#ff6b6b';
+        generateCaptcha();
+        document.getElementById('captchaInput').value = '';
+        return;
+    }
+    
+    const safeName = sanitizeInput(name);
+    const safeMessage = sanitizeInput(message);
+    
+    const workerURL = 'https://recubeim.elliktronic.workers.dev';
+    
+    try {
+        statusElement.innerHTML = 'Sending securely...';
+        statusElement.style.color = '#ffa500';
+        
+        button.disabled = true;
+        button.style.opacity = '0.6';
+        button.innerHTML = 'Sending...';
+        
+        const response = await fetch(workerURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: safeName,
+                message: safeMessage,
+                captcha: currentCaptchaCode,
+                userCaptcha: document.getElementById('captchaInput').value,
+                csrfToken: csrfToken,
+                website: document.getElementById('feedbackWebsite').value,
+                phone: document.getElementById('feedbackPhone').value
+            })
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok && result.success) {
+
+            lastSubmissionTime = Date.now();
+            submissionHistory.push(Date.now());
+            csrfToken = generateCSRFToken(); 
+            document.getElementById('csrfToken').value = csrfToken;
+            
+            statusElement.innerHTML = 'Message sent! Thank you!';
+            statusElement.style.color = '#90ee90';
+            
+            document.getElementById('feedbackName').value = '';
+            document.getElementById('feedbackMessage').value = '';
+            document.getElementById('captchaInput').value = '';
+            
+            generateCaptcha();
+            
+            formStartTime = Date.now();
+            mouseMovements = 0;
+            
+            setTimeout(() => {
+                button.disabled = false;
+                button.style.opacity = '1';
+                button.innerHTML = 'Send a message';
+                statusElement.innerHTML = '';
+                document.getElementById('securityStatus').textContent = 'Security system active';
+                document.getElementById('securityStatus').className = 'security-indicator';
+            }, 30000);
+            
+        } else {
+            throw new Error(result.error || 'Failed to send message');
+        }
+    } catch (error) {
+        console.error('Error sending feedback:', error);
+        statusElement.innerHTML = 'Security error! Please try again.';
+        statusElement.style.color = '#ff6b6b';
+        
+        button.disabled = false;
+        button.style.opacity = '1';
+        button.innerHTML = 'Send a message';
+        
+        generateCaptcha();
+    }
+}
+
+function switchTab(tabName, event) {
+    document.getElementById('wk').style.display = 'none';
+    document.getElementById('cl').style.display = 'none';
+    document.getElementById('gal').style.display = 'none';
+    
+    const tabs = document.querySelectorAll('#tabs a');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    event.target.classList.add('active');
+    
+    if(tabName === 'main') {
+        document.getElementById('wk').style.display = 'block';
+        currentTab = 'main';
+    } else if(tabName === 'other') {
+        document.getElementById('cl').style.display = 'block';
+        currentTab = 'other';
+    } else if(tabName === 'gallery') {
+        document.getElementById('gal').style.display = 'block';
+        currentTab = 'gallery';
+    }
+}
+
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+function initSecuritySystem() {
+    csrfToken = generateCSRFToken();
+    document.getElementById('csrfToken').value = csrfToken;
+    
+    document.addEventListener('mousemove', () => {
+        mouseMovements++;
+    });
+    
+    const formElements = document.querySelectorAll('.feedback-form input, .feedback-form textarea');
+    formElements.forEach(element => {
+        element.addEventListener('focus', () => {
+            formStartTime = Date.now();
+        });
+    });
+    
+    console.log('Security system initialized');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('#tabs a').classList.add('active');
+    updateGreeting();
+    generateCaptcha();
+    initSecuritySystem();
+    
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if(e.target === this) closeLightbox();
+    });
+    
+    setInterval(updateGreeting, 60000);
+});
+</script>
+
+	
+
+	<DIV id='zg'>
+		<div id='pr'>Recubeim OFFICIAL Web-Site</div>
+	</div>
+	
+	
+	<div id=mr>
+		<div id='sb'>Recubeim v1.0.2 | Community Growing Daily</div>
+		<div id="tabs">
+			<a href='#' onclick="switchTab('main', event)">Main</a>
+			<a href='#' onclick="switchTab('gallery', event)">Gallery</a>
+			<a href='#' onclick="switchTab('other', event)">Other</a>
+		</div>
+	</div>
+	
+	
+	<div id=svo>
+		
+		<div id=wk>
+		<h2>Welcome to Recubeim</h2>
+		<hr>
+		A sandbox game with 8x8 textures and 2D graphics, inspired by classic sandbox games. 
+		<br> 
+		Made using the 'Processing' Language. 
+	 
+		<div id='kn'><center><a href="404.html">Download</a></center></div>
+		<div id='pk'>Ver. 1.0.2 | July 30</div> 
+		<hr>
+		<h3>Features:</h3> 
+		Optimization! (Works on Pentium processors) 
+		<hr>
+		Working basic mechanisms
+		<hr>
+		96 Blocks
+		<hr>
+		Save & Load system!
+		<hr>
+		<h3>System Requirements:</h3>
+		CPU: Intel Pentium N3710 / I3 2330M / Phenom II X3 710 <br>
+		GPU: Intel HD 3000 / Radeon HD 6000M <br>
+		Operating System: x86-64 <br>
+		RAM: 350MB DDR3 (Game only) <br>
+		Storage: 340MB HDD (Game only) <br>
+
+	</div>
+		
+	
+	<div id=gal>
+			<h2>Gallery & Music</h2>
+			<hr>
+			
+			<h3>Screenshots</h3>
+			<div class="screenshots-grid">
+				<div class="screenshot-item" onclick="openLightbox('screens/1.jpg')">
+					<div class="screenshot-real">
+						<img src="screens/1.jpg" alt="Gameplay Screenshot 1" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(45deg, #2f4f6f, #1a2f4f);display:flex;align-items:center;justify-content:center;color:white;\'>Screenshot 1</div>';">
+					</div>
+					<div class="screenshot-caption">Earth</div>
+				</div>
+				
+				<div class="screenshot-item" onclick="openLightbox('screens/2.jpg')">
+					<div class="screenshot-real">
+						<img src="screens/2.jpg" alt="Gameplay Screenshot 2" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(45deg, #4f2f6f, #2a1f4f);display:flex;align-items:center;justify-content:center;color:white;\'>Screenshot 2</div>';">
+					</div>
+					<div class="screenshot-caption">Nether reactor</div>
+				</div>
+				
+				<div class="screenshot-item" onclick="openLightbox('screens/3.jpg')">
+					<div class="screenshot-real">
+						<img src="screens/3.jpg" alt="Gameplay Screenshot 3" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(45deg, #6f4f2f, #4f2a1f);display:flex;align-items:center;justify-content:center;color:white;\'>Screenshot 3</div>';">
+					</div>
+					<div class="screenshot-caption">House</div>
+				</div>
+				
+				<div class="screenshot-item" onclick="openLightbox('screens/4.jpg')">
+					<div class="screenshot-real">
+						<img src="screens/4.jpg" alt="Gameplay Screenshot 4" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(45deg, #2f6f4f, #1a4f2f);display:flex;align-items:center;justify-content:center;color:white;\'>Screenshot 4</div>';">
+					</div>
+					<div class="screenshot-caption">City</div>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<h3>Recubeim Official Soundtrack</h3>
+			<div class="music-simple">
+				<p>Download game soundtrack:</p>
+				
+				<div class="track-simple">
+					<h4>Svealand</h4>
+					<audio controls class="audio-player">
+						<source src="music/Svealand.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+					<div class="track-controls">
+						<span class="track-duration">MP3 Track</span>
+						<a href="music/Svealand.mp3" class="styled-button" download>
+							Download
+						</a>
+					</div>
+				</div>
+				
+				<div class="track-simple">
+					<h4>Static</h4>
+					<audio controls class="audio-player">
+						<source src="music/Static.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+					<div class="track-controls">
+						<span class="track-duration">MP3 Track</span>
+						<a href="music/Static.mp3" class="styled-button" download>
+							Download
+						</a>
+					</div>
+				</div>
+				
+				<div class="music-credits">
+					Free to use in your projects!
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id=cl>	
+		<h2>Other</h2>
+		<hr>
+		Dev-Team: <br>
+		Elliktronic: Leader, Owner, Lead-Developer <br>
+		Pluto: Pixel Artist <br> <hr>
+		And special thanks to: <br> <br>
+		<div id=cm>Our Community</div> <br> 
+		First Build: 14 March [2025] <br> 
+		First Release: 28 July [2025] <hr>
+		<h3>Links:</h3>
+		Discord: <a href="https://discord.gg/bfygz9CpNz">Link</a> <br>
+		Itch.Io: <a href="https://recubeim.itch.io/recubeim">Link</a> <br>
+		Blue-Sky: <a href="https://bsky.app/profile/leafprod.bsky.social">Link</a> <br>
+		
+		<hr>
+		
+		
+		<h3>Feedback</h3>
+		<div class="feedback-form">
+			
+			<input type="text" id="feedbackWebsite" name="website" 
+				   style="display: none !important;" 
+				   tabindex="-1" 
+				   autocomplete="off">
+			<input type="text" id="feedbackPhone" name="phone" 
+				   style="display: none !important;" 
+				   tabindex="-1" 
+				   autocomplete="off">
+			
+			
+			<input type="hidden" id="csrfToken" name="csrf_token">
+				   
+			<div style="margin: 10px 0;">
+				<input type="text" id="feedbackName" placeholder="Your name (optional)" 
+					   style="width: 100%; padding: 8px; margin: 5px 0; background: #1a1a1a; border: 1px solid #2f4f6f; color: white; font-size: 12px;">
+			</div>
+			
+			<div style="margin: 10px 0;">
+				<textarea id="feedbackMessage" placeholder="Message here..." 
+						  style="width: 100%; height: 80px; padding: 8px; margin: 5px 0; background: #1a1a1a; border: 1px solid #2f4f6f; color: white; font-size: 12px; resize: vertical;"></textarea>
+			</div>
+			
+			
+			<div class="captcha-container">
+				<div style="color: #ccc; font-size: 12px; margin-bottom: 10px; text-align: center;">
+					Enter the 6-digit code below:
+				</div>
+				
+				<div class="captcha-display" id="captchaDisplay">
+					
+				</div>
+				
+				<div class="captcha-controls">
+					<input type="text" id="captchaInput" class="captcha-input" 
+						   placeholder="Enter code" maxlength="6"
+						   oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+					<button class="captcha-refresh" onclick="generateCaptcha()" title="Refresh code">
+						Refresh
+					</button>
+				</div>
+				
+				<div class="captcha-status" id="captchaStatus"></div>
+			</div>
+			
+			
+			<div class="security-indicator" id="securityStatus">
+				Security system active
+			</div>
+			
+			<button onclick="sendFeedback()" class="styled-button" style="width: 100%;">
+				Send a message securely
+			</button>
+			<div id="feedbackStatus" style="font-size: 11px; margin-top: 8px; color: #888;"></div>
+		</div>
+		
+		</div>
+	</div>
+
+	
+	<div id="lightbox" class="lightbox">
+		<span class="lightbox-close" onclick="closeLightbox()">×</span>
+		<img id="lightbox-img" class="lightbox-content" src="" alt="Screenshot">
+	</div>
+	 	
+	
+	<div id=end>
+		<center>Recubeim - LeafProd. © 2025 | Protected</center>
+	</div>
+	
+</body>
+</html>
